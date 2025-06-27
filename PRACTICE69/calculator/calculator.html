@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="res"></p>
+    <div class="div">
+    <p>
+        <button onclick="
+            makeCalculation('1');
+            displayCal();
+            ">1</button>
+        <button onclick="
+             makeCalculation('2');
+             displayCal();
+        ">2</button>
+        <button onclick="
+             makeCalculation('3');
+             displayCal();
+        ">3</button>
+        <button class="right-button" onclick="
+              makeCalculation(' + ');
+              displayCal();
+        ">+</button>
+    </p>
+
+    <p>
+        <button onclick="
+              makeCalculation('4');
+              displayCal();
+            ">4</button>
+        <button onclick="
+              makeCalculation('5');
+              displayCal();
+        ">5</button>
+        <button onclick="
+              makeCalculation('6');
+              displayCal();
+        ">6</button>
+        <button class="right-button" onclick="
+              makeCalculation(' - ');
+              displayCal();
+        ">-</button>
+    </p>
+
+    <p>
+        <button  onclick="
+             makeCalculation('7');
+             displayCal();
+            ">7</button>
+        <button onclick="
+              makeCalculation('8');
+              displayCal();
+        ">8</button>
+        <button onclick="
+              makeCalculation('9');
+              displayCal();
+        ">9</button>
+        <button class="right-button" onclick="
+             makeCalculation(' * ');
+             displayCal();
+        ">*</button>
+    </p>
+
+    <p>
+        <button onclick="
+              makeCalculation('0');
+              displayCal();
+            ">0</button>
+        <button onclick="
+              makeCalculation(' . ');
+              displayCal();
+        ">.</button>
+        <button onclick="
+             calculation = eval(calculation);
+             displayCal();
+        ">=</button>
+        <button class="right-button" onclick="
+              makeCalculation(' / ');
+              displayCal();
+        ">/</button>
+    </p>
+
+    <button onclick="
+         calculation = '';
+         displayCal();
+    ">clear</button>
+    </div>
+
+    <script>
+        let calculation = '';
+        
+        function makeCalculation(value){
+            calculation += value;
+            displayCal();
+        }
+        
+       function displayCal() {
+            document.getElementById("res").innerHTML = calculation;
+       
+       }
+        
+    </script>
+</body>
+</html>
